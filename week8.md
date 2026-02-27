@@ -1,4 +1,13 @@
+R1
 Git flow has both a master and develop branch because they each have their specific purposes.  Master is a branch that always represents what is live right now.  This should always contain the working code and it is the code that someone actually runs when they use your application.  Develop is a branch for adding new features and getting ready for the next release.  Changes are usually made on a different branch then merged to develop before ever going to master.
 A hotfix branch is a branch that is used to fix a bug that is currently live.  This branch is merged straight into master in order to fix the bug as fast as possible.  A feature branch is basically just a normal branch that a new feature is developed in and eventually merged into the develop branch.
 A release branch is made when a new version of the software is about to be released.  This is different than the other two because when it is merged into master then it is considered a new version.
 If your project doesn't intend to support old versions then you typically only need your master and develop branches and also feature branches and hotfix branches.  Master and develop are still useful to be used in their desired way (master contains the live code and develop is what is merged into master).  Hotfix branches are still going to be needed to fix live bugs and feature branches will still be used to add new functionality.
+
+R2
+1.  A counter example is when xs = [2] and ys = [-2, 1].  The incorrect law is that reverse (xs ++ ys) == reverse xs ++ reverse ys.  The left side of this equation gives us a final result of [1, -2, 2], but the right side of this equation gives us a final result of [2, 1, -2].
+
+2.  Most of the ordered lists were short because QuickCheck is trying to get 100 tests that pass and it is using random data.  The probability of a random list being sorted is 100% if the list contains 0 or 1 items.  And the probability is much less as the list gets longer.  And because it is trying to get 100 tests that fit the criteria then it mainly uses these short lists.
+
+3.  When working with a conditional then QuickCheck needs to have some case that already exists before it can even test the thing.  So it generates a random test, checks if that test meets the condition, then if it does, it tests the actual thing.
+100 test cases, but 1000 candidate tests means that QuickCheck will generate tests until it gets 100 valid tests, or it attempts to create 1000 test.
